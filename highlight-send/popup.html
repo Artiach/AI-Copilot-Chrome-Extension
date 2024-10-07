@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Highlighted Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        #sendButton {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #responseText {
+            max-height: 300px; /* Limitar la altura máxima del elemento */
+            overflow-y: auto;  /* Permitir desplazamiento vertical */
+            white-space: pre-wrap; /* Permitir saltos de línea en el texto largo */
+            word-wrap: break-word; /* Ajuste de palabras para evitar desbordamientos */
+        }
+    </style>
+</head>
+<body>
+    <h3>Send Highlighted Text</h3>
+    <label for="userInput">Enter additional info:</label>
+    <input type="text" id="userInput" placeholder="Type your input here" />
+    <button id="sendButton">Send to Webhook</button>
+    <p id="status"></p>
+    <h4>Response from Webhook:</h4>
+    <p id="responseText"></p> <!-- Aquí se mostrará el texto devuelto -->
+    <script src="popup.js"></script>
+</body>
+</html>
